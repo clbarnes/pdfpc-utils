@@ -4,6 +4,8 @@ import re
 import sys
 
 presentation_name = sys.argv[1]
+if presentation_name.endswith('.tex'):
+	presentation_name = presentation_name[:-4]
 
 tex_path = presentation_name + '.tex'
 out_path = presentation_name + '.pdfpc'

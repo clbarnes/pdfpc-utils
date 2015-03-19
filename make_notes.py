@@ -3,8 +3,10 @@
 import re
 import sys
 
-tex_path = sys.argv[1]
-out_path = sys.argv[2]
+presentation_name = sys.argv[1]
+
+tex_path = presentation_name + '.tex'
+out_path = presentation_name + '.pdfpc'
 
 frame_re = re.compile(r'\\begin\{frame\}(.*?)\\end\{frame\}', re.DOTALL)
 note_re = re.compile(r'\\note\{(.*?)\}', re.DOTALL)
